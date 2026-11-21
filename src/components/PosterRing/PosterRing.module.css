@@ -1,0 +1,107 @@
+.container {
+  margin-top: 72px;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--fg-2);
+}
+
+.subtitle {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.75rem;
+  color: var(--fg-3);
+  margin-top: 4px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.counter {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: var(--step--1);
+  color: var(--fg-2);
+  font-variant-numeric: tabular-nums;
+  min-width: 52px;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 6px;
+}
+
+.ringBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-btn);
+  border: 1px solid var(--line-2);
+  background: var(--panel);
+  color: var(--fg);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.875rem;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.ringBtn:hover {
+  border-color: var(--fg-3);
+  background: var(--raised);
+}
+
+.ringStage {
+  position: relative;
+  height: 420px;
+  perspective: 1400px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-panel);
+  background: var(--panel);
+  display: grid;
+  place-items: center;
+}
+
+.ring {
+  position: relative;
+  width: 200px;
+  height: 250px;
+  transform-style: preserve-3d;
+  transform: translateZ(calc(-1 * var(--r, 310px))) rotateY(var(--a, 0deg));
+  will-change: transform;
+}
+
+.ringItem {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.posterSlot {
+  border-radius: var(--radius-btn);
+  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.9);
+}
+
+@media (max-width: 600px) {
+  .ringStage {
+    height: 360px;
+  }
+  .ring {
+    width: 160px;
+    height: 200px;
+  }
+}

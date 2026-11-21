@@ -1,0 +1,63 @@
+.reelGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.9fr);
+  gap: clamp(28px, 4vw, 56px);
+  align-items: center;
+}
+
+.reelSide {
+  display: flex;
+  flex-direction: column;
+}
+
+.highlightTag {
+  color: var(--tape);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: var(--step--1);
+  font-weight: 500;
+}
+
+.sideTitle {
+  font-size: 1.625rem;
+  letter-spacing: -0.03em;
+  margin: 10px 0 14px;
+  font-weight: 500;
+  color: var(--fg);
+}
+
+.sideText {
+  color: var(--fg-2);
+  margin-bottom: 24px;
+  line-height: 1.55;
+}
+
+.roles {
+  display: grid;
+  gap: 10px;
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+}
+
+.roleRow {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.8125rem;
+  border-bottom: 1px dashed var(--line);
+  padding-bottom: 8px;
+}
+
+.roleCraft {
+  color: var(--fg-3);
+}
+
+.roleTool {
+  color: var(--fg);
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .reelGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

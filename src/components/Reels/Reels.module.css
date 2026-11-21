@@ -1,0 +1,68 @@
+.container {
+  margin-top: 64px;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--fg-2);
+}
+
+.count {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: var(--step--1);
+  color: var(--fg-3);
+}
+
+.reelsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.reelCard {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-slot);
+  background: var(--panel);
+  overflow: hidden;
+}
+
+.reelSlot {
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.reelMeta {
+  padding: 12px 14px;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.75rem;
+}
+
+.todo {
+  color: var(--fg-3);
+  border-bottom: 1px dashed var(--fg-3);
+}
+
+@media (max-width: 860px) {
+  .reelsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 440px) {
+  .reelsGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

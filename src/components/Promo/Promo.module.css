@@ -1,0 +1,37 @@
+.container {
+  margin-top: 64px;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--fg-2);
+}
+
+.note {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: var(--step--1);
+  color: var(--fg-3);
+}
+
+.campaignGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.8fr) minmax(0, 0.8fr);
+  gap: 20px;
+  align-items: stretch;
+}
+
+@media (max-width: 900px) {
+  .campaignGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

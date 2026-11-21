@@ -1,12 +1,15 @@
 "use client";
 
-import { useRef, useEffect } from "react";
-import { MediaSlot } from "@/components/MediaSlot/MediaSlot";
-import { VideoSlot } from "@/components/VideoSlot/VideoSlot";
-import { profile } from "@/content/profile";
+import { useRef, useEffect, type ReactNode } from "react";
 import styles from "./HeroStack3D.module.css";
 
-export function HeroStack3D() {
+type HeroStack3DProps = {
+  poster: ReactNode;
+  reel: ReactNode;
+  shot: ReactNode;
+};
+
+export function HeroStack3D({ poster, reel, shot }: HeroStack3DProps) {
   const stageRef = useRef<HTMLDivElement>(null);
   const rigRef = useRef<HTMLDivElement>(null);
 
@@ -46,17 +49,11 @@ export function HeroStack3D() {
   return (
     <div ref={stageRef} className={styles.stage} aria-hidden="true">
       <div ref={rigRef} className={styles.rig}>
-        <div className={`${styles.layer} ${styles.posterLayer}`}>
-          <MediaSlot media={profile.hero.layers.poster} priority />
-        </div>
+        <div className={`${styles.layer} ${styles.posterLayer}`}>{poster}</div>
 
-        <div className={`${styles.layer} ${styles.reelLayer}`}>
-          <VideoSlot media={profile.hero.layers.showreel} />
-        </div>
+        <div className={`${styles.layer} ${styles.reelLayer}`}>{reel}</div>
 
-        <div className={`${styles.layer} ${styles.shotLayer}`}>
-          <MediaSlot media={profile.hero.layers.heroApp} priority />
-        </div>
+        <div className={`${styles.layer} ${styles.shotLayer}`}>{shot}</div>
 
         <div className={`${styles.layer} ${styles.codeLayer}`}>
           <span className={styles.codeKeyword}>const</span> me = &#123; stack: &quot;MERN&quot;, craft: [&quot;code&quot;, &quot;film&quot;] &#125;;

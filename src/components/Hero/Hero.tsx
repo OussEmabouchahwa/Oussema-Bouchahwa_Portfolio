@@ -1,4 +1,6 @@
 import { profile } from "@/content/profile";
+import { MediaSlot } from "@/components/MediaSlot/MediaSlot";
+import { VideoSlot } from "@/components/VideoSlot/VideoSlot";
 import { HeroStack3D } from "./HeroStack3D/HeroStack3D";
 import { SequenceBar } from "./SequenceBar/SequenceBar";
 import { Stats } from "./Stats/Stats";
@@ -58,7 +60,11 @@ export function Hero() {
           </div>
         </div>
 
-        <HeroStack3D />
+        <HeroStack3D
+          poster={<MediaSlot media={profile.hero.layers.poster} priority />}
+          reel={<VideoSlot media={profile.hero.layers.showreel} />}
+          shot={<MediaSlot media={profile.hero.layers.heroApp} priority />}
+        />
       </div>
 
       <SequenceBar />

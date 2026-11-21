@@ -1,5 +1,7 @@
 .sequence {
   margin-top: clamp(48px, 7vw, 88px);
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .seqHead {
@@ -14,6 +16,7 @@
 
 .seqScroll {
   overflow-x: auto;
+  max-width: 100%;
   padding-top: 12px;
   padding-bottom: 8px;
 }

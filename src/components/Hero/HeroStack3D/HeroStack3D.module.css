@@ -1,0 +1,73 @@
+.stage {
+  position: relative;
+  height: clamp(360px, 44vw, 580px);
+  perspective: 1600px;
+}
+
+.rig {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  transform: rotateX(calc(9deg + var(--rx, 0deg))) rotateY(calc(-24deg + var(--ry, 0deg)));
+  transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rig {
+    transform: rotateX(9deg) rotateY(-24deg);
+    transition: none;
+  }
+}
+
+.layer {
+  position: absolute;
+  transform-style: preserve-3d;
+  box-shadow: 0 40px 60px -30px rgba(0, 0, 0, 0.7);
+}
+
+.posterLayer {
+  width: 50%;
+  right: 3%;
+  top: 0;
+  transform: translateZ(-160px);
+}
+
+.reelLayer {
+  width: 76%;
+  left: 0;
+  top: 30%;
+  transform: translateZ(0px);
+}
+
+.shotLayer {
+  width: 56%;
+  right: 4%;
+  bottom: 0;
+  transform: translateZ(140px);
+}
+
+.codeLayer {
+  left: 4%;
+  top: 6%;
+  transform: translateZ(230px);
+  background: var(--fg);
+  color: var(--bg);
+  border-radius: var(--radius-btn);
+  padding: 12px 14px;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  box-shadow: 0 30px 50px -24px rgba(0, 0, 0, 0.8);
+  white-space: nowrap;
+}
+
+.codeKeyword {
+  color: #8A5A00;
+  font-weight: 500;
+}
+
+@media (max-width: 960px) {
+  .stage {
+    margin-top: 16px;
+  }
+}

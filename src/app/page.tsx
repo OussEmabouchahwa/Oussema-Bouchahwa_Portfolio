@@ -1,7 +1,8 @@
 import { Nav } from "@/components/Nav/Nav";
+import { Hero } from "@/components/Hero/Hero";
 import { Footer } from "@/components/Footer/Footer";
+import { SectionHeader } from "@/components/SectionHeader/SectionHeader";
 import { MediaSlot } from "@/components/MediaSlot/MediaSlot";
-import { profile } from "@/content/profile";
 import { sections } from "@/content/sections";
 import { projects } from "@/content/projects";
 
@@ -10,54 +11,27 @@ export default function HomePage() {
     <>
       <Nav />
       <main id="main">
-        <section className="wrap" style={{ paddingBlock: "80px", minHeight: "60vh" }}>
-          <h1 style={{ fontSize: "var(--h1)", lineHeight: 0.94, letterSpacing: "-0.045em" }}>
-            {profile.hero.h1Main}{" "}
-            <em
-              style={{
-                fontFamily: "var(--font-instrument-serif), Georgia, serif",
-                fontStyle: "italic",
-                fontWeight: 400,
-                color: "var(--tape)",
-              }}
-            >
-              {profile.hero.h1Italic}
-            </em>
-          </h1>
-          <p style={{ marginTop: "24px", color: "var(--fg-2)", fontSize: "var(--step-1)" }}>
-            {profile.hero.lede}
-          </p>
-        </section>
+        <Hero />
 
         {sections.map((sec) => (
           <section
             key={sec.id}
             id={sec.id}
-            className="wrap"
+            className="wrap band"
             style={{
-              paddingBlock: "80px",
-              minHeight: "40vh",
+              paddingBlock: "clamp(72px, 10vw, 128px)",
               borderTop: "1px solid var(--line)",
             }}
           >
-            <span className="tc" style={{ color: "var(--tape)", display: "block", marginBottom: "12px" }}>
-              {sec.timecode}
-            </span>
-            <h2 style={{ fontSize: "var(--h2)", letterSpacing: "-0.04em" }}>
-              {sec.title}{" "}
-              <em
-                style={{
-                  fontFamily: "var(--font-instrument-serif), Georgia, serif",
-                  fontStyle: "italic",
-                  fontWeight: 400,
-                  color: "var(--tape)",
-                }}
-              >
-                {sec.italic}
-              </em>
-            </h2>
+            <SectionHeader
+              timecode={sec.timecode}
+              title={sec.title}
+              italic={sec.italic}
+              note={sec.note}
+              headingId={`heading-${sec.id}`}
+            />
             {sec.id === "work" && (
-              <div style={{ marginTop: "32px", maxWidth: "600px" }}>
+              <div style={{ maxWidth: "600px" }}>
                 <MediaSlot media={projects[0].media} />
               </div>
             )}

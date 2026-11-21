@@ -1,0 +1,99 @@
+.hero {
+  padding-block: clamp(48px, 8vw, 104px) 56px;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(24px, 4vw, 64px);
+  align-items: center;
+}
+
+.kicker {
+  color: var(--fg-3);
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: var(--step--1);
+}
+
+.kickerBadge {
+  color: var(--tape);
+  font-weight: 500;
+}
+
+.h1 {
+  font-size: var(--h1);
+  line-height: 0.94;
+  letter-spacing: -0.045em;
+  margin: 24px 0 28px;
+  font-weight: 500;
+}
+
+.h1Italic {
+  font-family: var(--font-instrument-serif), Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--tape);
+  letter-spacing: -0.01em;
+  font-size: 1.1em;
+  line-height: 0.8;
+}
+
+.lede {
+  font-size: var(--step-1);
+  color: var(--fg-2);
+  max-width: 34em;
+  line-height: 1.55;
+}
+
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 36px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  border-radius: var(--radius-btn);
+  font-weight: 500;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  border: 1px solid var(--line-2);
+  color: var(--fg);
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.btn:hover {
+  border-color: var(--fg-3);
+  background: var(--panel);
+}
+
+.btnTape {
+  background: var(--tape);
+  border-color: var(--tape);
+  color: var(--tape-ink);
+}
+
+.btnTape:hover {
+  background: #FFC55A;
+  border-color: #FFC55A;
+}
+
+.btnIcon {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 960px) {
+  .heroGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

@@ -9,6 +9,10 @@ import { Showreel } from "@/components/Showreel/Showreel";
 import { Reels } from "@/components/Reels/Reels";
 import { Promo } from "@/components/Promo/Promo";
 import { PosterRing } from "@/components/PosterRing/PosterRing";
+import { ExperienceTracks } from "@/components/ExperienceTracks/ExperienceTracks";
+import { StackList } from "@/components/StackList/StackList";
+import { About } from "@/components/About/About";
+import { Contact } from "@/components/Contact/Contact";
 import { MediaSlot } from "@/components/MediaSlot/MediaSlot";
 import { sections } from "@/content/sections";
 import { projects } from "@/content/projects";
@@ -17,7 +21,10 @@ import { posters } from "@/content/media";
 export default function HomePage() {
   const workSec = sections.find((s) => s.id === "work")!;
   const mediaSec = sections.find((s) => s.id === "media")!;
-  const remainingSections = sections.filter((s) => s.id !== "work" && s.id !== "media");
+  const expSec = sections.find((s) => s.id === "experience")!;
+  const stackSec = sections.find((s) => s.id === "stack")!;
+  const aboutSec = sections.find((s) => s.id === "about")!;
+  const contactSec = sections.find((s) => s.id === "contact")!;
 
   const featureProject = projects[0];
   const cardProjects = projects.slice(1, 4);
@@ -28,7 +35,7 @@ export default function HomePage() {
       <main id="main">
         <Hero />
 
-        {/* Work Section */}
+        {/* 01: Work */}
         <section
           id={workSec.id}
           className="wrap band"
@@ -64,7 +71,7 @@ export default function HomePage() {
           <MoreSites />
         </section>
 
-        {/* Media Section */}
+        {/* 02: Media */}
         <section
           id={mediaSec.id}
           className="wrap band"
@@ -108,28 +115,90 @@ export default function HomePage() {
           </PosterRing>
         </section>
 
-        {/* Remaining sections placeholders */}
-        {remainingSections.map((sec) => (
-          <section
-            key={sec.id}
-            id={sec.id}
-            className="wrap band"
-            aria-labelledby={`heading-${sec.id}`}
-            style={{
-              paddingBlock: "clamp(72px, 10vw, 128px)",
-              minHeight: "40vh",
-              borderTop: "1px solid var(--line)",
-            }}
-          >
-            <SectionHeader
-              timecode={sec.timecode}
-              title={sec.title}
-              italic={sec.italic}
-              note={sec.note}
-              headingId={`heading-${sec.id}`}
-            />
-          </section>
-        ))}
+        {/* 03: Experience */}
+        <section
+          id={expSec.id}
+          className="wrap band"
+          aria-labelledby={`heading-${expSec.id}`}
+          style={{
+            paddingBlock: "clamp(72px, 10vw, 128px)",
+            borderTop: "1px solid var(--line)",
+          }}
+        >
+          <SectionHeader
+            timecode={expSec.timecode}
+            title={expSec.title}
+            italic={expSec.italic}
+            note={expSec.note}
+            headingId={`heading-${expSec.id}`}
+          />
+
+          <ExperienceTracks />
+        </section>
+
+        {/* 04: Stack */}
+        <section
+          id={stackSec.id}
+          className="wrap band"
+          aria-labelledby={`heading-${stackSec.id}`}
+          style={{
+            paddingBlock: "clamp(72px, 10vw, 128px)",
+            borderTop: "1px solid var(--line)",
+          }}
+        >
+          <SectionHeader
+            timecode={stackSec.timecode}
+            title={stackSec.title}
+            italic={stackSec.italic}
+            note={stackSec.note}
+            headingId={`heading-${stackSec.id}`}
+          />
+
+          <StackList />
+        </section>
+
+        {/* 05: About */}
+        <section
+          id={aboutSec.id}
+          className="wrap band"
+          aria-labelledby={`heading-${aboutSec.id}`}
+          style={{
+            paddingBlock: "clamp(72px, 10vw, 128px)",
+            borderTop: "1px solid var(--line)",
+          }}
+        >
+          <SectionHeader
+            timecode={aboutSec.timecode}
+            title={aboutSec.title}
+            italic={aboutSec.italic}
+            note={aboutSec.note}
+            headingId={`heading-${aboutSec.id}`}
+          />
+
+          <About />
+        </section>
+
+        {/* 06: Contact */}
+        <section
+          id={contactSec.id}
+          className="wrap band"
+          aria-labelledby={`heading-${contactSec.id}`}
+          style={{
+            paddingBlock: "clamp(72px, 10vw, 128px)",
+            paddingBottom: "clamp(88px, 12vw, 160px)",
+            borderTop: "1px solid var(--line)",
+          }}
+        >
+          <SectionHeader
+            timecode={contactSec.timecode}
+            title={contactSec.title}
+            italic={contactSec.italic}
+            note={contactSec.note}
+            headingId={`heading-${contactSec.id}`}
+          />
+
+          <Contact />
+        </section>
       </main>
       <Footer />
     </>

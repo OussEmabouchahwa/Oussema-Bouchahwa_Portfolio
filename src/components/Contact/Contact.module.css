@@ -1,0 +1,47 @@
+.container {
+  max-width: 44em;
+}
+
+.heading {
+  font-size: clamp(2rem, 4.4vw, 3.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  font-weight: 500;
+  margin-bottom: 28px;
+  color: var(--fg);
+}
+
+.italic {
+  font-family: var(--font-instrument-serif), Georgia, serif;
+  font-weight: 400;
+  color: var(--tape);
+  letter-spacing: -0.01em;
+}
+
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  border-radius: var(--radius-btn);
+  font-weight: 500;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  border: 1px solid var(--line-2);
+  color: var(--fg);
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.btn:hover {
+  border-color: var(--fg-3);
+  background: var(--panel);
+}

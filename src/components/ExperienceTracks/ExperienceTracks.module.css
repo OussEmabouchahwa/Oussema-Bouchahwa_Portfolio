@@ -1,0 +1,208 @@
+.container {
+  margin-top: 12px;
+}
+
+.tracks {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.trackRuler {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: 20px;
+  align-items: center;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line-2);
+}
+
+.rulerLabel {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: var(--step--1);
+  color: var(--fg-3);
+}
+
+.rulerScale {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: var(--step--1);
+  color: var(--fg-3);
+}
+
+.trackRow {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: 20px;
+  align-items: center;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.trackId {
+  font-family: var(--font-geist-mono), monospace;
+  font-weight: 500;
+  font-size: 0.8125rem;
+}
+
+.trackTape {
+  color: var(--tape);
+}
+
+.trackSteel {
+  color: var(--steel);
+}
+
+.trackSage {
+  color: var(--sage);
+}
+
+.company {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--fg);
+}
+
+.subMeta {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: var(--step--1);
+  color: var(--fg-3);
+}
+
+.lane {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-btn);
+  padding: 4px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+}
+
+.clip {
+  height: 100%;
+  border-radius: var(--radius-tag);
+  padding: 6px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--tape-ink);
+  min-width: 0;
+  overflow: hidden;
+}
+
+.clipTape {
+  background: var(--tape);
+}
+
+.clipSteel {
+  background: var(--steel);
+}
+
+.clipSage {
+  background: var(--sage);
+}
+
+.clipRole {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.clipSummary {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.6875rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 0.85;
+}
+
+.trackNote {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.75rem;
+  color: var(--fg-3);
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.jobPoints {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.jobCard {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-slot);
+  background: var(--panel);
+  padding: 20px;
+}
+
+.jobCardHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.jobCardTitle {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--fg);
+}
+
+.jobCardRole {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.75rem;
+  color: var(--fg-2);
+}
+
+.pointList {
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.pointItem {
+  font-size: 0.875rem;
+  color: var(--fg-2);
+  padding-left: 14px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.pointItem::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: var(--tape);
+}
+
+@media (max-width: 860px) {
+  .jobPoints {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 860px) {
+  .trackRuler,
+  .trackRow {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

@@ -6,6 +6,7 @@ import styles from "./MediaSlot.module.css";
 type MediaSlotProps = {
   media: Media;
   className?: string;
+  style?: React.CSSProperties;
   priority?: boolean;
   sizes?: string;
 };
@@ -13,6 +14,7 @@ type MediaSlotProps = {
 export function MediaSlot({
   media,
   className = "",
+  style,
   priority = false,
   sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
 }: MediaSlotProps) {
@@ -22,7 +24,7 @@ export function MediaSlot({
   return (
     <div
       className={`${styles.slot} ${isFilled ? styles.filled : ""} ${className}`}
-      style={{ aspectRatio: media.ratio }}
+      style={{ aspectRatio: media.ratio, ...style }}
     >
       {isFilled ? (
         <Image

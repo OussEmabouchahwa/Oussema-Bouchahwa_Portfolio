@@ -1,7 +1,9 @@
 import { Nav } from "@/components/Nav/Nav";
 import { Footer } from "@/components/Footer/Footer";
+import { MediaSlot } from "@/components/MediaSlot/MediaSlot";
 import { profile } from "@/content/profile";
 import { sections } from "@/content/sections";
+import { projects } from "@/content/projects";
 
 export default function HomePage() {
   return (
@@ -54,6 +56,11 @@ export default function HomePage() {
                 {sec.italic}
               </em>
             </h2>
+            {sec.id === "work" && (
+              <div style={{ marginTop: "32px", maxWidth: "600px" }}>
+                <MediaSlot media={projects[0].media} />
+              </div>
+            )}
           </section>
         ))}
       </main>

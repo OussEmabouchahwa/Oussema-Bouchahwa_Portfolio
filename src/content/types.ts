@@ -16,9 +16,18 @@ export type Project = {
   text: string;
   tags: string[];
   facts?: { value: string; label: string }[];
-  link: { label: string; href: string } | null;
+  link: { label: string; href: string; isTodo?: boolean } | null;
   media: Media;
   featured?: boolean;
+  screenBar?: { file: string; status: string };
+};
+
+export type ShippedSite = {
+  id: string;
+  name: string;
+  domain: string;
+  isTodo: boolean;
+  media: Media;
 };
 
 export type Job = {
@@ -40,6 +49,26 @@ export type Section = {
   note?: string;
 };
 
+export type StackCategory = {
+  group: string;
+  sub: string;
+  items: string[];
+};
+
+export type ReelItem = {
+  id: string;
+  title: string;
+  duration: string;
+  isTodo: boolean;
+  media: Media;
+};
+
+export type PosterItem = {
+  id: string;
+  title: string;
+  media: Media;
+};
+
 export type Profile = {
   name: string;
   monogram: string;
@@ -58,11 +87,17 @@ export type Profile = {
     workCta: string;
     mediaCta: string;
     codeSnippet: string;
+    layers: {
+      poster: Media;
+      showreel: Media;
+      heroApp: Media;
+    };
   };
   stats: { value: string; label: string }[];
   about: {
     p1: string;
     p2: string;
+    portrait: Media;
     education: { degree: string; institution: string; detail: string }[];
     languages: { name: string; level: string }[];
   };

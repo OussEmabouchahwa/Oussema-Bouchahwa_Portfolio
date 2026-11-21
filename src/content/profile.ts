@@ -1,4 +1,5 @@
 import type { Profile } from "./types";
+import { showreelData } from "./media";
 
 export const profile: Profile = {
   name: "Oussema Bouchahwa",
@@ -18,6 +19,23 @@ export const profile: Profile = {
     workCta: "See selected work",
     mediaCta: "Watch the showreel",
     codeSnippet: 'const me = { stack: "MERN", craft: ["code", "film"] };',
+    layers: {
+      poster: {
+        kind: "image",
+        file: "assets/posters/poster-hero.jpg",
+        hint: "Drop poster-hero.jpg · 1080×1350",
+        ratio: "4/5",
+        alt: "Hero poster visual",
+      },
+      showreel: showreelData.media,
+      heroApp: {
+        kind: "image",
+        file: "assets/projects/hero-app.jpg",
+        hint: "Drop hero-app.jpg · 1600×1000",
+        ratio: "16/10",
+        alt: "Application screenshot",
+      },
+    },
   },
   stats: [
     { value: "1.5 yrs", label: "In-company development" },
@@ -28,6 +46,13 @@ export const profile: Profile = {
   about: {
     p1: "I'm Oussema, a software engineering student at IPSAS in Sfax. I write code that has to work in real companies: booking systems, internal tools, mobile apps and the automations that tie them together.",
     p2: "I also edit video and design visuals, so I care about how a product looks and feels as much as how it runs. Right now I'm going deep on AI agents and automation, and I'm looking for a team where I can build tools people use every day.",
+    portrait: {
+      kind: "image",
+      file: "assets/about/portrait.jpg",
+      hint: "Drop portrait.jpg · 1080×1350",
+      ratio: "4/5",
+      alt: "Portrait of Oussema Bouchahwa",
+    },
     education: [
       {
         degree: "Engineering cycle, Computer Science",

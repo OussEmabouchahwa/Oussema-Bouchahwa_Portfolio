@@ -1,0 +1,68 @@
+.header {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 50;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+
+.navWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-block: 14px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--fg);
+}
+
+.mark {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-btn);
+  background: var(--fg);
+  color: var(--bg);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-instrument-serif), Georgia, serif;
+  font-style: italic;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.brandName {
+  font-size: var(--step-0);
+  font-weight: 500;
+}
+
+.links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--fg-2);
+  font-size: 0.9375rem;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: var(--fg);
+}
+
+@media (max-width: 860px) {
+  .links {
+    display: none;
+  }
+}

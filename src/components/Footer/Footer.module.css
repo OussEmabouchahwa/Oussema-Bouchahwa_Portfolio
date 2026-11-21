@@ -1,0 +1,23 @@
+.footer {
+  padding-block: 36px;
+  border-top: 1px solid var(--line);
+  font-size: var(--step--1);
+  color: var(--fg-3);
+}
+
+.footWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.copyright {
+  color: var(--fg-3);
+}
+
+.edition {
+  font-family: var(--font-geist-mono), monospace;
+  color: var(--fg-2);
+}

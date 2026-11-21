@@ -1,0 +1,53 @@
+.navtc {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius-btn);
+  padding: 6px 10px;
+  font-size: var(--step--1);
+  color: var(--fg-2);
+  white-space: nowrap;
+}
+
+.rec {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--tape);
+  flex: none;
+}
+
+.tcLabel {
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.tcDigits {
+  font-family: var(--font-geist-mono), monospace;
+  font-variant-numeric: tabular-nums;
+  color: var(--fg);
+}
+
+.progressBar {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 2px;
+  width: 100%;
+  background: transparent;
+  pointer-events: none;
+}
+
+.progressIndicator {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: var(--tape);
+  will-change: width;
+}
+
+@media (max-width: 420px) {
+  .tcLabel {
+    display: none;
+  }
+}

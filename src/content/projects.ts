@@ -47,17 +47,17 @@ export const projects: Project[] = [
     title: "Automated weather bot",
     meta: ["Automation"],
     text: "An n8n workflow connected to a weather API that fetches and sends forecasts on its own. Built in two weeks and shared on LinkedIn.",
-    tags: ["n8n", "APIs", "Automation"],
+    tags: ["n8n", "Cloudflare Workers", "Telegram Bot API", "Automation"],
     link: {
       label: "Read the code ↗",
       href: `${GITHUB}/weather_bot.py`,
     },
     media: {
       kind: "image",
-      file: "assets/projects/n8n-weather-bot.jpg",
-      hint: "Drop n8n-weather-bot.jpg · 1600×1000",
+      file: "assets/projects/weather-bot.jpg",
+      hint: "Drop weather-bot.jpg · 1600×1000",
       ratio: "16/10",
-      alt: "n8n workflow: schedule trigger, HTTP request to a weather API, Telegram message",
+      alt: "Weather bot worker code in the Cloudflare editor, with its live preview",
     },
   },
   {

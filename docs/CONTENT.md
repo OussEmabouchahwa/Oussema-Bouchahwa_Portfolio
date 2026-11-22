@@ -50,8 +50,8 @@ Every word on the site comes from here. If something is missing, leave a visible
 ### P/02 Automated weather bot
 - Meta: Automation
 - Text: "An n8n workflow connected to a weather API that fetches and sends forecasts on its own. Built in two weeks and shared on LinkedIn."
-- Tags: n8n, APIs, Automation
-- Link: https://github.com/OussEmabouchahwa/weather_bot.py ("Read the code ↗"). OPEN: the repo is a Python bot, the text describes the n8n workflow; confirm they are one project.
+- Tags: n8n, Cloudflare Workers, Telegram Bot API, Automation
+- Link: https://github.com/OussEmabouchahwa/weather_bot.py ("Read the code ↗"). Runs as a Telegram bot on Cloudflare Workers (screenshot `projects/weather-bot.jpg`); the n8n workflow is the first version.
 
 ### P/03 LampeOnline
 - Meta: E-commerce · 3D
@@ -117,7 +117,7 @@ Track scale: 0 to 12 months. Clip width = months / 12. Note under tracks: "Clip 
 | Showreel | assets/video/showreel.mp4 + showreel.jpg | 1920×1080 |
 | Hero app shot | assets/projects/hero-app.jpg | 1600×1000 |
 | Feature | assets/projects/antigravity-kit-builder.jpg | 1600×1000 |
-| Cards | assets/projects/student-management.jpg, n8n-weather-bot.jpg, lms-expense-design.jpg | 1600×1000 |
+| Cards | assets/projects/weather-bot.jpg, lampe-online.jpg, antigravity-kit-builder.jpg | 1600×1000 |
 | Sites | assets/sites/site-01..04.jpg | 1600×1000 |
 | Reels | assets/reels/reel-01..04.mp4 + .jpg | 1080×1920 |
 | Promo | assets/video/route-insolite-promo.mp4 + .jpg | 16:9 |

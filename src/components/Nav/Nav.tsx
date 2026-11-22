@@ -7,7 +7,7 @@ export function Nav() {
   return (
     <header className={styles.header} id="top">
       <div className={`wrap ${styles.navWrap}`}>
-        <a href="#top" className={styles.brand} aria-label={`${profile.name} – back to top`}>
+        <a href="#top" className={styles.brand}>
           <span className={styles.mark} aria-hidden="true">
             {profile.monogram}
           </span>

@@ -124,7 +124,6 @@ export function SequenceBar() {
                 href={`#${sec.id}`}
                 data-sec={sec.id}
                 className={`${styles.clip} ${clipColorClass[sec.id] || styles.clipDim}`}
-                aria-label={`${sec.title} ${sec.italic} (${sec.timecode})`}
               >
                 <span>{sec.timecode}</span>
                 <b className={styles.clipTitle}>

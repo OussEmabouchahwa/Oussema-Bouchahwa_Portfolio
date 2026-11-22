@@ -142,15 +142,15 @@ export const shippedSites: ShippedSite[] = [
   },
   {
     id: "site-04",
-    name: "TODO site name",
-    domain: "TODO domain",
-    isTodo: true,
+    name: "Nizam (Flutter app)",
+    domain: "github.com/OussEmabouchahwa/life-app",
+    isTodo: false,
     media: {
       kind: "image",
       file: "assets/sites/site-04.jpg",
       hint: "Drop site-04.jpg · 1600×1000",
       ratio: "16/10",
-      alt: "Screenshot of site 4",
+      alt: "Nizam app screens: today, plan, grades and Ramadan food plan",
     },
   },
 ];

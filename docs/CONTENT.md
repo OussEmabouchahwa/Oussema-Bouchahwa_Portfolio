@@ -70,7 +70,7 @@ Name · domain, screenshot `sites/site-0N.jpg` (taken from each repository READM
 1. Marlow & Reed · e-comerce-ten-rust.vercel.app
 2. EduPulse · github.com/OussEmabouchahwa/eduplus
 3. Masrouf (expense tracker) · github.com/OussEmabouchahwa/Expense-Tracker-Web-Application
-4. TODO
+4. Nizam (Flutter daily planner for students: timetable, prayer times computed offline, study, grades, training, food) · github.com/OussEmabouchahwa/life-app
 
 Removed from the page on 2026-11-22: Student Management System (no repository or screenshot) and "LMS & Expense Tracker specs" (replaced by the real repositories above).
 

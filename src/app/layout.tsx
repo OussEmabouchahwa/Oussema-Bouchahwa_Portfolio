@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
+import { profile } from "@/content/profile";
+import { siteUrl } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -19,7 +21,7 @@ const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
 });
 
-const BASE_URL = "https://oussema.dev";
+const BASE_URL = siteUrl;
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -56,19 +58,16 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: "Oussema Bouchahwa",
+  name: profile.name,
   jobTitle: "Full-stack developer & video creator",
   url: BASE_URL,
-  email: "oussema.bouchahwa@ipsas.tn",
+  email: profile.email,
   address: {
     "@type": "PostalAddress",
     addressLocality: "Sfax",
     addressCountry: "TN",
   },
-  sameAs: [
-    "https://www.linkedin.com/in/bouchahwa-oussema-0216b3264/",
-    "https://github.com/OussEmabouchahwa",
-  ],
+  sameAs: [profile.linkedin, profile.github],
 };
 
 export default function RootLayout({

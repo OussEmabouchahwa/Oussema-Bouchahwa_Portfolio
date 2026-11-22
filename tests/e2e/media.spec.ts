@@ -3,19 +3,24 @@ import fs from "node:fs";
 import path from "node:path";
 
 test.describe("MediaSlot build-time resolution and placeholders", () => {
-  const fixtureRelPath = "assets/projects/antigravity-kit-builder.jpg";
+  const fixtureRelPath = "assets/sites/site-04.jpg";
   const fixtureFullPath = path.join(process.cwd(), "public", fixtureRelPath);
+  const backupPath = `${fixtureFullPath}.bak`;
+
+  test.beforeEach(() => {
+    // Move a real file aside instead of deleting it, so the test never destroys assets.
+    if (fs.existsSync(fixtureFullPath)) fs.renameSync(fixtureFullPath, backupPath);
+  });
+
+  test.afterEach(() => {
+    if (fs.existsSync(backupPath)) fs.renameSync(backupPath, fixtureFullPath);
+  });
 
   test("missing asset displays placeholder with crop marks, hint and path", async ({ page }) => {
-    // Ensure fixture does not exist for this test
-    if (fs.existsSync(fixtureFullPath)) {
-      fs.unlinkSync(fixtureFullPath);
-    }
-
     await page.goto("/");
-    const placeholder = page.locator("[role='img'][aria-label*='antigravity-kit-builder']");
+    const placeholder = page.locator("[role='img'][aria-label*='site-04']");
     await expect(placeholder).toBeVisible();
-    await expect(placeholder).toContainText("Drop antigravity-kit-builder.jpg");
-    await expect(placeholder).toContainText("assets/projects/antigravity-kit-builder.jpg");
+    await expect(placeholder).toContainText("Drop site-04.jpg");
+    await expect(placeholder).toContainText(fixtureRelPath);
   });
 });

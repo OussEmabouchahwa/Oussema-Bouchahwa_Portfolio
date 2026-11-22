@@ -48,7 +48,7 @@ export function HeroStack3D({ poster, reel, shot }: HeroStack3DProps) {
 
   return (
     <div ref={stageRef} className={styles.stage} aria-hidden="true">
-      <div ref={rigRef} className={styles.rig}>
+      <div ref={rigRef} className={styles.rig} inert>
         <div className={`${styles.layer} ${styles.posterLayer}`}>{poster}</div>
 
         <div className={`${styles.layer} ${styles.reelLayer}`}>{reel}</div>

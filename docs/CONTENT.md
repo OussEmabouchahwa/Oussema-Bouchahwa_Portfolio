@@ -63,7 +63,7 @@ Every word on the site comes from here. If something is missing, leave a visible
 - Meta: Developer tooling · Python · Playwright · Mermaid
 - Text: "A reusable AI-agent skill that turns a project brief into a complete, verified kit for an AI coding IDE: master prompt, README, design system, architecture with decision records, security model, rules and workflows."
 - Tags: Python, Playwright, System design, Security, Design systems
-- Link: https://github.com/OussEmabouchahwa/Antigravity-Kit-Builder. Screenshot still TODO (the repo has none).
+- Link: https://github.com/OussEmabouchahwa/Antigravity-Kit-Builder. Screenshot: the GitHub README page (dark theme).
 
 ### More sites
 Name · domain, screenshot `sites/site-0N.jpg` (taken from each repository README):
@@ -75,7 +75,7 @@ Name · domain, screenshot `sites/site-0N.jpg` (taken from each repository READM
 Removed from the page on 2026-11-22: Student Management System (no repository or screenshot) and "LMS & Expense Tracker specs" (replaced by the real repositories above).
 
 ## Media
-- Showreel: label "SHOWREEL 2026 · 01:30", side title "Ninety seconds of the edits I'm proudest of.", text "Travel promos, social reels and motion pieces. I handle the whole chain: shooting, cutting, color and motion graphics.", roles Edit/Premiere Pro, Motion/After Effects, Stills/Photoshop.
+- Showreel (90 s cut from the reels and the Route Insolite promo, 3-up vertical panels, title and end cards): label "SHOWREEL 2026 · 01:30", side title "Ninety seconds of the edits I'm proudest of.", text "Travel promos, social reels and motion pieces. I handle the whole chain: shooting, cutting, color and motion graphics.", roles Edit/Premiere Pro, Motion/After Effects, Stills/Photoshop.
 - Reels: 6 vertical (9:16). 01-02 podcast edits, 03-04 for Décoration Djerba (ceilings, curtains; also trades as Yara Rideaux), 05-06 Route Insolite.
 - Route Insolite travel campaign: promo video (vertical, shown contained) + 2 photos cropped from the agency posters (locations TODO).
 - Poster wall: 8 posters (4:5), 3D ring: DJ Siiva event, DJ Siiva birthday, Eid Mubarak (Club Ambassadeurs VESOS TN | IPSAS), deer artwork, 3 Route Insolite posters, 1 Route Insolite chapter poster. Posters are designs made by Oussema, not portraits.

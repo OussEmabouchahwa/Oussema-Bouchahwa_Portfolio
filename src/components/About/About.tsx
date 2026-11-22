@@ -32,6 +32,25 @@ export function About() {
               {about.languages.map((l) => `${l.name} (${l.level})`).join(" · ")}
             </p>
           </div>
+
+          <div className={styles.bioBlock}>
+            <span className={styles.bioBlockLabel}>CERTIFICATES · DATACAMP</span>
+            <ul className={styles.certList}>
+              {about.certificates.map((cert) => (
+                <li key={cert.file} className={styles.certItem}>
+                  <a
+                    href={`/${cert.file}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.certLink}
+                  >
+                    {cert.name}
+                  </a>
+                  <span className={styles.certDate}>{cert.date}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
 

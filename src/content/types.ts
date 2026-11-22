@@ -6,6 +6,7 @@ export type Media = {
   ratio: `${number}/${number}`;
   label?: string;
   alt?: string;
+  fit?: "cover" | "contain";
 };
 
 export type Project = {
@@ -100,6 +101,7 @@ export type Profile = {
     portrait: Media;
     education: { degree: string; institution: string; detail: string }[];
     languages: { name: string; level: string }[];
+    certificates: { name: string; issuer: string; date: string; file: string }[];
   };
   footer: {
     copyright: string;

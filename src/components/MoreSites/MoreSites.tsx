@@ -7,7 +7,7 @@ export function MoreSites() {
     <div className={styles.container}>
       <div className={styles.headerRow}>
         <h3 className={styles.title}>More sites I&apos;ve shipped</h3>
-        <span className={styles.note}>4 client sites · screenshots pending</span>
+        <span className={styles.note}>Web projects · repositories and live sites</span>
       </div>
 
       <div className={styles.sitesGrid}>
@@ -15,8 +15,8 @@ export function MoreSites() {
           <div key={site.id} className={styles.siteCard}>
             <MediaSlot media={site.media} className={styles.siteSlot} />
             <div className={styles.siteMeta}>
-              <span className={styles.todo}>{site.name}</span>
-              <span className={styles.todo}>{site.domain}</span>
+              <span className={site.isTodo ? styles.todo : undefined}>{site.name}</span>
+              <span className={site.isTodo ? styles.todo : undefined}>{site.domain}</span>
             </div>
           </div>
         ))}

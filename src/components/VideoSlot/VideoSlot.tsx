@@ -29,7 +29,7 @@ export function VideoSlot({ media, className = "" }: VideoSlotProps) {
           muted
           playsInline
           preload="none"
-          className={styles.video}
+          className={`${styles.video} ${media.fit === "contain" ? styles.contain : ""}`}
           aria-label={media.alt || media.hint}
         />
       ) : (

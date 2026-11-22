@@ -45,7 +45,9 @@
 .siteMeta {
   padding: 12px 14px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 4px;
+  overflow-wrap: anywhere;
   font-family: var(--font-geist-mono), monospace;
   font-size: 0.75rem;
 }

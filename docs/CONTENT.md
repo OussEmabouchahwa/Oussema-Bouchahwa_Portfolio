@@ -38,42 +38,47 @@ Every word on the site comes from here. If something is missing, leave a visible
 | about | 00:05:00:00 | – | Behind the *camera* | Sfax, Tunisia |
 | contact | 00:06:00:00 | – | Let's make something that *ships.* | – |
 
-## Projects
-### P/01 Antigravity Kit Builder (feature)
-- Meta: Developer tooling · Python · Playwright · Mermaid
-- Text: "A reusable AI-agent skill that turns a project brief into a complete, verified kit for an AI coding IDE: master prompt, README, design system, architecture with decision records, security model, rules and workflows."
-- Facts: **20** templates for documents, rules, skills and workflows · **5** Python scripts: WCAG contrast, kit validation, responsive screenshots, scaffolding, packaging · **2 bugs** real layout defects caught by the checks that a visual review missed
-- Tags: Python, Playwright, System design, Security, Design systems
-- Link: https://github.com/OussEmabouchahwa/Antigravity-Kit-Builder ("Read the code ↗")
-- Screen bar: "antigravity-kit-builder / README.md" · "● 0 errors · 0 warnings"
+## Projects (order: automation first)
+### P/01 Gmail AI Assistant (feature)
+- Meta: Automation · Google Apps Script · Gemini · Telegram
+- Text: "A serverless AI agent that reads Gmail, uses Gemini to pick out the emails that matter and sends a digest on Telegram in Tunisian Derja. Email content is treated as untrusted data, and it falls back to a plain list if Gemini fails."
+- Facts (from the repo README): **3** urgency levels · **6** Telegram commands · **7 AM** daily digest, Tunisia time
+- Tags: Apps Script, Gemini API, Telegram Bot API, Prompt-injection defence
+- Link: https://github.com/OussEmabouchahwa/Gmail-AI-Assistant ("Read the code ↗")
+- Screen bar: "Gmail-AI-Assistant / Code.gs" · "polling Telegram every minute"
 
-### P/02 Student Management System
-- Meta: Web app
-- Text: "Full-stack CRUD app with a REST API, SQLite and server-side validation. Search, filters, responsive UI, 8 automated API tests and a browser flow checked with Playwright."
-- Tags: Node.js, Express, SQLite, REST
-- Link: TODO repository URL (until then: GitHub repositories tab)
-
-### P/03 Automated weather bot
+### P/02 Automated weather bot
 - Meta: Automation
 - Text: "An n8n workflow connected to a weather API that fetches and sends forecasts on its own. Built in two weeks and shared on LinkedIn."
 - Tags: n8n, APIs, Automation
-- Link: TODO LinkedIn post URL (until then: LinkedIn profile)
+- Link: https://github.com/OussEmabouchahwa/weather_bot.py ("Read the code ↗"). OPEN: the repo is a Python bot, the text describes the n8n workflow; confirm they are one project.
 
-### P/04 LMS & Expense Tracker specs
-- Meta: System design
-- Text: "Engineering specifications for two apps: architecture diagrams, data model, API catalog, auth and security model mapped to OWASP Top 10, and accessible design systems."
-- Wording rule: these are specifications, not deployed apps. Never write "built" or "deployed" for them.
-- Tags: Architecture, Auth, OWASP, WCAG
-- Link: Antigravity Kit Builder repository ("Read the method ↗")
+### P/03 LampeOnline
+- Meta: E-commerce · 3D
+- Text: "A lighting e-commerce store for Tunisia (prices in TND) with an interactive 3D showroom, a product viewer with live colour-temperature control, wishlist, slide-over cart and a checkout with cash on delivery."
+- Tags: TypeScript, Three.js, React Three Fiber, E-commerce
+- Link: https://github.com/OussEmabouchahwa/e-commerce-LampeOnline-
 
-### More sites I've shipped
-Four slots: name TODO, domain TODO, screenshot `sites/site-0N.jpg`.
+### P/04 Antigravity Kit Builder
+- Meta: Developer tooling · Python · Playwright · Mermaid
+- Text: "A reusable AI-agent skill that turns a project brief into a complete, verified kit for an AI coding IDE: master prompt, README, design system, architecture with decision records, security model, rules and workflows."
+- Tags: Python, Playwright, System design, Security, Design systems
+- Link: https://github.com/OussEmabouchahwa/Antigravity-Kit-Builder. Screenshot still TODO (the repo has none).
+
+### More sites
+Name · domain, screenshot `sites/site-0N.jpg` (taken from each repository README):
+1. Marlow & Reed · e-comerce-ten-rust.vercel.app
+2. EduPulse · github.com/OussEmabouchahwa/eduplus
+3. Masrouf (expense tracker) · github.com/OussEmabouchahwa/Expense-Tracker-Web-Application
+4. TODO
+
+Removed from the page on 2026-11-22: Student Management System (no repository or screenshot) and "LMS & Expense Tracker specs" (replaced by the real repositories above).
 
 ## Media
 - Showreel: label "SHOWREEL 2026 · 01:30", side title "Ninety seconds of the edits I'm proudest of.", text "Travel promos, social reels and motion pieces. I handle the whole chain: shooting, cutting, color and motion graphics.", roles Edit/Premiere Pro, Motion/After Effects, Stills/Photoshop.
-- Reels: 4 vertical (9:16), titles TODO, durations TODO.
-- Route Insolite travel campaign: promo video + 2 photos (locations TODO).
-- Poster wall: 8 posters (4:5), 3D ring.
+- Reels: 6 vertical (9:16). 01-02 podcast edits, 03-04 for Décoration Djerba (ceilings, curtains; also trades as Yara Rideaux), 05-06 Route Insolite.
+- Route Insolite travel campaign: promo video (vertical, shown contained) + 2 photos cropped from the agency posters (locations TODO).
+- Poster wall: 8 posters (4:5), 3D ring: DJ Siiva event, DJ Siiva birthday, Eid Mubarak (Club Ambassadeurs VESOS TN | IPSAS), deer artwork, 3 Route Insolite posters, 1 Route Insolite chapter poster. Posters are designs made by Oussema, not portraits.
 
 ## Experience (durations only, no dates)
 | Track | Company | Role | Duration | Points |
@@ -100,6 +105,7 @@ Track scale: 0 to 12 months. Clip width = months / 12. Note under tracks: "Clip 
 - P2: "I also edit video and design visuals, so I care about how a product looks and feels as much as how it runs. Right now I'm going deep on **AI agents and automation**, and I'm looking for a team where I can build tools people use every day."
 - Education: Engineering cycle, Computer Science · IPSAS, Sfax · 2nd year. Bachelor's in Computer Science (MDW) · ISET Jerba · 2025.
 - Languages: Arabic (Native), English (B2), French (B1).
+- Certificates (DataCamp, PDFs in `assets/certs/`): AI Engineer for Developers Associate (Jun 2026), SQL Associate (Apr 2026), Introduction to Git (Jun 2026), Introduction to DAX in Power BI, AI-Assisted Coding for Developers, Intermediate SQL (Feb 2026), Intermediate Java, Introduction to Object-Oriented Programming in Java, Introduction to Java (Jan 2026), Introduction to SQL (Nov 2025).
 
 ## Footer
 "© 2026 Oussema Bouchahwa · Sfax, Tunisia" · "Final cut v1.0 · 25 fps"

@@ -22,9 +22,9 @@ export const showreelData = {
 export const reels: ReelItem[] = [
   {
     id: "reel-01",
-    title: "TODO reel title",
+    title: "Podcast reel",
     duration: "00:53",
-    isTodo: true,
+    isTodo: false,
     media: {
       kind: "video",
       file: "assets/reels/reel-01.mp4",
@@ -32,13 +32,14 @@ export const reels: ReelItem[] = [
       hint: "Drop reel-01.mp4 · 1080×1920",
       ratio: "9/16",
       label: "REEL 01",
+      alt: "Podcast reel",
     },
   },
   {
     id: "reel-02",
-    title: "TODO reel title",
+    title: "Podcast reel",
     duration: "01:26",
-    isTodo: true,
+    isTodo: false,
     media: {
       kind: "video",
       file: "assets/reels/reel-02.mp4",
@@ -46,13 +47,14 @@ export const reels: ReelItem[] = [
       hint: "Drop reel-02.mp4 · 1080×1920",
       ratio: "9/16",
       label: "REEL 02",
+      alt: "Podcast reel",
     },
   },
   {
     id: "reel-03",
-    title: "TODO reel title",
+    title: "Décoration Djerba · plafond",
     duration: "00:14",
-    isTodo: true,
+    isTodo: false,
     media: {
       kind: "video",
       file: "assets/reels/reel-03.mp4",
@@ -60,13 +62,14 @@ export const reels: ReelItem[] = [
       hint: "Drop reel-03.mp4 · 1080×1920",
       ratio: "9/16",
       label: "REEL 03",
+      alt: "Décoration Djerba · plafond",
     },
   },
   {
     id: "reel-04",
-    title: "TODO reel title",
+    title: "Décoration Djerba · rideaux",
     duration: "00:17",
-    isTodo: true,
+    isTodo: false,
     media: {
       kind: "video",
       file: "assets/reels/reel-04.mp4",
@@ -74,6 +77,37 @@ export const reels: ReelItem[] = [
       hint: "Drop reel-04.mp4 · 1080×1920",
       ratio: "9/16",
       label: "REEL 04",
+      alt: "Décoration Djerba · rideaux",
+    },
+  },
+  {
+    id: "reel-05",
+    title: "Route Insolite reel",
+    duration: "01:18",
+    isTodo: false,
+    media: {
+      kind: "video",
+      file: "assets/reels/reel-05.mp4",
+      poster: "assets/reels/reel-05.jpg",
+      hint: "Drop reel-05.mp4 · 1080×1920",
+      ratio: "9/16",
+      label: "REEL 05",
+      alt: "Route Insolite reel",
+    },
+  },
+  {
+    id: "reel-06",
+    title: "Route Insolite reel",
+    duration: "00:14",
+    isTodo: false,
+    media: {
+      kind: "video",
+      file: "assets/reels/reel-06.mp4",
+      poster: "assets/reels/reel-06.jpg",
+      hint: "Drop reel-06.mp4 · 1080×1920",
+      ratio: "9/16",
+      label: "REEL 06",
+      alt: "Route Insolite reel",
     },
   },
 ];
@@ -88,6 +122,7 @@ export const campaignData = {
     hint: "Drop route-insolite-promo.mp4 · 16:9",
     ratio: "16/9" as const,
     label: "ROUTE INSOLITE PROMO",
+    fit: "contain" as const,
   },
   photos: [
     {

@@ -50,13 +50,20 @@ describe("Content Model & Integrity", () => {
     expect(months).toEqual([12, 6, 1]);
   });
 
-  it("strictly ensures LMS & Expense Tracker specs never contain 'built' or 'deployed'", () => {
-    const lmsProject = projects.find((p) => p.id === "lms-expense-tracker-specs");
-    expect(lmsProject).toBeDefined();
-    if (lmsProject) {
-      const lower = lmsProject.text.toLowerCase();
+  it("never describes specification-only projects as built or deployed", () => {
+    for (const project of projects.filter((p) => /spec/i.test(p.title))) {
+      const lower = project.text.toLowerCase();
       expect(lower).not.toContain("built");
       expect(lower).not.toContain("deployed");
+    }
+  });
+
+  it("lists certificates with unique files under assets/certs/", () => {
+    const files = new Set<string>();
+    for (const cert of profile.about.certificates) {
+      expect(cert.file).toMatch(/^assets\/certs\/.+\.pdf$/);
+      expect(files.has(cert.file)).toBe(false);
+      files.add(cert.file);
     }
   });
 

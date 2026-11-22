@@ -131,6 +131,11 @@
   z-index: 1;
 }
 
+.contain {
+  object-fit: contain;
+  background: var(--panel);
+}
+
 .filled {
   border-style: solid;
   border-color: var(--line);

@@ -7,7 +7,7 @@ export function Reels() {
     <div className={styles.container}>
       <div className={styles.headerRow}>
         <h4 className={styles.title}>Short-form · 9:16 vertical</h4>
-        <span className={styles.count}>4 reels</span>
+        <span className={styles.count}>{reels.length} reels</span>
       </div>
 
       <div className={styles.reelsGrid}>
@@ -15,8 +15,8 @@ export function Reels() {
           <div key={reel.id} className={styles.reelCard}>
             <VideoSlot media={reel.media} className={styles.reelSlot} />
             <div className={styles.reelMeta}>
-              <span className={styles.todo}>{reel.title}</span>
-              <span className={reel.duration.includes("TODO") ? styles.todo : undefined}>{reel.duration}</span>
+              <span className={reel.isTodo ? styles.todo : undefined}>{reel.title}</span>
+              <span>{reel.duration}</span>
             </div>
           </div>
         ))}

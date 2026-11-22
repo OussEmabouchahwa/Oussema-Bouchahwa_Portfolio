@@ -70,6 +70,18 @@ export const profile: Profile = {
       { name: "English", level: "B2" },
       { name: "French", level: "B1" },
     ],
+    certificates: [
+      { name: "AI Engineer for Developers Associate", issuer: "DataCamp", date: "Jun 2026", file: "assets/certs/ai-engineer-for-developers-associate.pdf" },
+      { name: "SQL Associate", issuer: "DataCamp", date: "Apr 2026", file: "assets/certs/sql-associate.pdf" },
+      { name: "Introduction to Git", issuer: "DataCamp", date: "Jun 2026", file: "assets/certs/introduction-to-git.pdf" },
+      { name: "Introduction to DAX in Power BI", issuer: "DataCamp", date: "Feb 2026", file: "assets/certs/introduction-to-dax-power-bi.pdf" },
+      { name: "AI-Assisted Coding for Developers", issuer: "DataCamp", date: "Feb 2026", file: "assets/certs/ai-assisted-coding-for-developers.pdf" },
+      { name: "Intermediate SQL", issuer: "DataCamp", date: "Feb 2026", file: "assets/certs/intermediate-sql.pdf" },
+      { name: "Intermediate Java", issuer: "DataCamp", date: "Jan 2026", file: "assets/certs/intermediate-java.pdf" },
+      { name: "Introduction to Object-Oriented Programming in Java", issuer: "DataCamp", date: "Jan 2026", file: "assets/certs/introduction-to-oop-in-java.pdf" },
+      { name: "Introduction to Java", issuer: "DataCamp", date: "Jan 2026", file: "assets/certs/introduction-to-java.pdf" },
+      { name: "Introduction to SQL", issuer: "DataCamp", date: "Nov 2025", file: "assets/certs/introduction-to-sql.pdf" },
+    ],
   },
   footer: {
     copyright: "© 2026 Oussema Bouchahwa · Sfax, Tunisia",

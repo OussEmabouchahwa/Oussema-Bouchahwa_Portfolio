@@ -54,6 +54,38 @@
   font-weight: 500;
 }
 
+.certList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.certItem {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.9375rem;
+}
+
+.certLink {
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.certLink:hover {
+  color: var(--tape);
+}
+
+.certDate {
+  flex-shrink: 0;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.75rem;
+  color: var(--fg-3);
+  font-variant-numeric: tabular-nums;
+}
+
 .portraitWrapper {
   max-width: 380px;
   margin-left: auto;

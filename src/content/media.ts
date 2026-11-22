@@ -23,7 +23,7 @@ export const reels: ReelItem[] = [
   {
     id: "reel-01",
     title: "TODO reel title",
-    duration: "TODO:00",
+    duration: "00:53",
     isTodo: true,
     media: {
       kind: "video",
@@ -37,7 +37,7 @@ export const reels: ReelItem[] = [
   {
     id: "reel-02",
     title: "TODO reel title",
-    duration: "TODO:00",
+    duration: "01:26",
     isTodo: true,
     media: {
       kind: "video",
@@ -51,7 +51,7 @@ export const reels: ReelItem[] = [
   {
     id: "reel-03",
     title: "TODO reel title",
-    duration: "TODO:00",
+    duration: "00:14",
     isTodo: true,
     media: {
       kind: "video",
@@ -65,7 +65,7 @@ export const reels: ReelItem[] = [
   {
     id: "reel-04",
     title: "TODO reel title",
-    duration: "TODO:00",
+    duration: "00:17",
     isTodo: true,
     media: {
       kind: "video",

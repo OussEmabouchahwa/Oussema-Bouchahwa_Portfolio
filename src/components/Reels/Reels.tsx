@@ -16,7 +16,7 @@ export function Reels() {
             <VideoSlot media={reel.media} className={styles.reelSlot} />
             <div className={styles.reelMeta}>
               <span className={styles.todo}>{reel.title}</span>
-              <span className={styles.todo}>{reel.duration}</span>
+              <span className={reel.duration.includes("TODO") ? styles.todo : undefined}>{reel.duration}</span>
             </div>
           </div>
         ))}

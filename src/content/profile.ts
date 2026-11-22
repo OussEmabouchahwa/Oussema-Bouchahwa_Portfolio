@@ -33,7 +33,7 @@ export const profile: Profile = {
         file: "assets/projects/hero-app.jpg",
         hint: "Drop hero-app.jpg · 1600×1000",
         ratio: "16/10",
-        alt: "LampeOnline product page with the 3D lamp viewer",
+        alt: "Nizam app screens: today in dark mode, timetable and training",
       },
     },
   },
